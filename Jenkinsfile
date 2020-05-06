@@ -14,6 +14,13 @@ node {
         app = docker.build("karaokeadmin/gidevops")
     }
 
+    stage('Test') {
+        app.inside {
+            sh 'npm test'
+        }
+
+    }
+
     stage('Push image') {
         /* Finally, we'll push the image into Docker Hub */
 
