@@ -1,0 +1,10 @@
+name: The boss and shell
+
+on: [push]
+
+jobs:
+  run-shell-comman:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo exists
+        run: echo "It's a bash $date"
